@@ -1,0 +1,69 @@
+@import "reset.css";
+@import "hellstyle.css";
+.asbutton{
+    border-width: 1px;
+    border-style: solid;
+    border-color: rosybrown;
+    border-radius: 3px;
+    background: rebeccapurple;
+    position: relative;
+    left: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    width: 20%;/*85 20%*/
+    height: 60%;/*29 100%*/
+    transition: All 0.5s ease;
+}
+.asitbutton{
+    border-width: 1px;
+    border-style: solid;
+    border-color: rosybrown;
+    border-radius: 3px;
+    background: rebeccapurple;
+    position: relative;
+    left: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    width: 20%;/*85 20%*/
+    height: 60%;/*29 100%*/
+    transition: All 0.5s ease;
+}
+.asnobutton{
+    border-width: 1px;
+    border-style: solid;
+    border-color: rosybrown;
+    border-radius: 3px;
+    background: rebeccapurple;
+    position: relative;
+    top: 30px;
+    left: 69%;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    width: 20%;/*85 20%*/
+    height: 24%;/*29 100%*/
+    transition: All 0.5s ease;
+}
+.asbutton:hover{
+    background: red;
+}
+.asitbutton:hover{
+    background: blue;
+}
+.asnobutton:hover{
+    background: green;
+}

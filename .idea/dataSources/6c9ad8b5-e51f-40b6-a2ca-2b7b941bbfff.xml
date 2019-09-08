@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="MySQL - Users@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.0">
+    <root id="1"/>
+    <schema id="2" parent="1" name="users">
+      <Visible>1</Visible>
+    </schema>
+    <table id="3" parent="2" name="testinginject"/>
+    <table id="4" parent="2" name="user2"/>
+    <table id="5" parent="2" name="user2_1"/>
+    <table id="6" parent="2" name="userlog"/>
+    <table id="7" parent="2" name="userlog_2"/>
+    <table id="8" parent="2" name="roles"/>
+    <table id="9" parent="2" name="groups"/>
+    <table id="10" parent="2" name="datalog"/>
+    <column id="11" parent="3" name="f">
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="12" parent="3" name="d">
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="13" parent="3" name="PRIMARY">
+      <ColNames>f</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="14" parent="4" name="u_id">
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="15" parent="4" name="email">
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="16" parent="4" name="user_FK">
+      <ColNames>email</ColNames>
+    </index>
+    <key id="17" parent="4" name="PRIMARY">
+      <ColNames>u_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="18" parent="4" name="user_FK">
+      <ColNames>email</ColNames>
+      <RefTableName>user2_1</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>email</RefColNames>
+    </foreign-key>
+    <column id="19" parent="5" name="email">
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="20" parent="5" name="password">
+      <DataType>varchar(80)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="21" parent="5" name="nickname">
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="22" parent="5" name="PRIMARY">
+      <ColNames>email</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="23" parent="6" name="u_id">
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="24" parent="6" name="title">
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="25" parent="6" name="userlog_FK">
+      <ColNames>u_id</ColNames>
+    </index>
+    <key id="26" parent="6" name="PRIMARY">
+      <ColNames>title</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="27" parent="6" name="userlog_FK">
+      <ColNames>u_id</ColNames>
+      <RefTableName>user2</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>u_id</RefColNames>
+    </foreign-key>
+    <trigger id="28" parent="6" name="mydelTrig">
+      <Turn>before-row</Turn>
+      <Events>D</Events>
+    </trigger>
+    <column id="29" parent="7" name="title">
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="30" parent="7" name="content">
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="31" parent="7" name="describ">
+      <DataType>longtext|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="32" parent="7" name="PRIMARY">
+      <ColNames>title</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="33" parent="7" name="userlog_2_ibfk_1">
+      <ColNames>title</ColNames>
+      <RefTableName>userlog</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>title</RefColNames>
+    </foreign-key>
+    <column id="34" parent="8" name="r_id">
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="35" parent="8" name="rname">
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="36" parent="8" name="PRIMARY">
+      <ColNames>r_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="37" parent="9" name="r_id">
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="38" parent="9" name="u_id">
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <index id="39" parent="9" name="g_r_id_FK">
+      <ColNames>r_id</ColNames>
+    </index>
+    <key id="40" parent="9" name="PRIMARY">
+      <ColNames>u_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="41" parent="9" name="g_r_id_FK">
+      <ColNames>r_id</ColNames>
+      <RefTableName>roles</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>r_id</RefColNames>
+    </foreign-key>
+    <foreign-key id="42" parent="9" name="g_u_id_FK">
+      <ColNames>u_id</ColNames>
+      <RefTableName>user2</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>u_id</RefColNames>
+    </foreign-key>
+    <column id="43" parent="10" name="id">
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="44" parent="10" name="title">
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="45" parent="10" name="PRIMARY">
+      <ColNames>id
+title</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="46" parent="10" name="datalog_ibfk_1">
+      <ColNames>id</ColNames>
+      <RefTableName>user2</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>u_id</RefColNames>
+    </foreign-key>
+  </database-model>
+</dataSource>

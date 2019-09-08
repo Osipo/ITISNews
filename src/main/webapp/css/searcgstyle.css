@@ -1,0 +1,122 @@
+@import "reset.css";
+body {
+    height: 100%;
+    width: 100%;
+    background: #ffffff;
+}
+/*wrapper of all content. After header.*/
+.wrapper{
+    width: 100%;
+    min-width: 960px;
+    max-width: 1920px;
+    height: 100%;
+    min-height: 500px;
+    margin: 0 auto;
+    padding: 0px 0px 0px 0px;
+}
+.clear{
+    overflow: hidden;
+}
+/*Head of our site*/
+header {
+    margin: 0 auto;
+    width: 100%;
+    min-width: 960px;
+    height: 100px;
+    background: blue;
+    padding-top: 20px;
+}
+/*Inside in header*/
+.maxwidth {
+    margin: 0 auto;
+    min-width: 960px;
+    max-width: 1920px;
+    height: 80%;
+}
+/*form in header for searching*/
+#f1{
+    position: relative;
+    left: 40px;
+    padding: 0px 0px 0px 0px;
+    display: inline-block;
+    width: 50%;/*400 50%*/
+    height: 60%;/*35 100%*/
+    bottom: 3px;
+}
+#f1 input{
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(226, 226, 226);
+    border-radius: 3px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+    font-size: 20px;
+    margin: 0px 0px 0px 0px;
+    height: 99%;/*25 100%*/
+    width: 70%;
+}
+#f1 button{
+    border-width: 1px;
+    border-style: solid;
+    border-color: rosybrown;
+    border-radius: 3px;
+    background: rebeccapurple;
+    position: relative;
+    left: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    color: white;
+    width: 20%;/*85 20%*/
+    height: 100%;/*29 100%*/
+    cursor: pointer;
+    transition: All 0.0s ease;
+}
+#f1 button:hover{
+    background: lightseagreen;
+}
+/*h1 in header*/
+.text-header{
+    position: relative;
+    top: 10px;
+    margin: 0 auto;
+    font-size: 60px;
+    font-style: normal;
+    font-kerning: auto;
+    font-weight: bolder;
+    left: 20px;
+    font-family: "Roboto", sans-serif;
+    color: white;
+    display: inline;
+}
+/*Wrapper of references, which was founded.*/
+#swrap {
+    width: 80%;
+    height: 80%;
+    margin: 5% 10% 5% 10%; /*12.5,10,0,10*/
+    padding: 10px 10px 10px 10px;
+    border-width: 1px;
+    border-style: ridge;
+    border-color: cyan;
+    min-height: 398px;
+}
+#swrap a {
+    width: 95%;
+    height: 5%;
+    margin: 5% 5% 5% 5%;
+    text-decoration: none;
+    transition: All 0.2s ease;
+    font-size: 35px;
+    font-weight: bold;
+    font-style: normal;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    color: mediumspringgreen;
+    cursor: pointer;
+    display: block;
+}
+#swrap a:hover{
+    border-bottom:2px solid;
+}

@@ -1,0 +1,97 @@
+@import "reset.css";
+body {
+    height: 100%;
+    width: 100%;
+    background: #ffffff;
+}
+/*wrapper of all content. After header.*/
+.wrapper{
+    width: 100%;
+    min-width: 960px;
+    max-width: 1920px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0px 0px 0px 0px;
+    border-style: ridge;
+    border-width: 2px;
+    border-color: cyan;
+}
+.clear{
+    overflow: hidden;
+}
+/*Head of our site*/
+header {
+    margin: 0 auto;
+    width: 100%;
+    min-width: 960px;
+    height: 100px;
+    background: blue;
+    padding-top: 20px;
+    border-style: ridge;
+    border-width: 2px;
+    border-color: blue;
+}
+/*Inside in header*/
+.maxwidth {
+    margin: 0 auto;
+    min-width: 960px;
+    max-width: 1920px;
+    height: 80%;
+}
+/*h1 in header*/
+#text-header{
+    position: relative;
+    top: 10px;
+    margin: 0 auto;
+    font-size: 60px;
+    font-style: normal;
+    font-kerning: auto;
+    font-weight: bolder;
+    left: 20px;
+    font-family: "Roboto", sans-serif;
+    color: white;
+    display: inline;
+}
+#text-header2{
+    position: relative;
+    top: 10px;
+    margin: 0 auto;
+    font-size: 60px;
+    font-style: normal;
+    font-kerning: auto;
+    font-weight: bolder;
+    left: 200px;
+    font-family: "Roboto", sans-serif;
+    color: white;
+    display: inline;
+}
+.article{
+    position: relative;
+    margin: 3% 0% 2% 10%;
+    font-size: 60px;
+    font-style: normal;
+    font-kerning: auto;
+    font-weight: bolder;
+    font-family: "Times New Roman";
+    color: black;
+}
+.cont{
+    position: relative;
+    font-size: 45px;
+    font-style: normal;
+    font-kerning: auto;
+    font-weight: bolder;
+    margin: 0% 0% 0% 10%;
+    font-family: "Times New Roman";
+    color: dimgray;
+}
+.desc{
+    position: relative;
+    font-size: 35px;
+    font-style: italic;
+    font-kerning: auto;
+    font-weight: bolder;
+    margin: 5% 0% 5% 10%;
+    font-family: "Times New Roman";
+    color: blueviolet;
+}
